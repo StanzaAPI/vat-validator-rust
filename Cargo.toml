@@ -1,0 +1,18 @@
+[package]
+name = "stanzaapi-vat-validator"
+version = "1.0.0"
+edition = "2021"
+authors = ["Stanza"]
+description = "Official high-speed Rust client for EU & UK VAT Validator & Rate Engine"
+license = "MIT"
+readme = "README.md"
+homepage = "https://stanzaapi.com/tools/vat-validator"
+repository = "https://github.com/StanzaAPI/vat-validator-rust"
+keywords = ["vat-validator","vies","eu-vat","uk-vat","tax-rates"]
+categories = ["web-programming::http-client", "development-tools::ffi"]
+
+[dependencies]
+reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tokio = { version = "1.0", features = ["macros", "rt-multi-thread"], optional = true }
